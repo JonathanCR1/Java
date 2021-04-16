@@ -1,13 +1,27 @@
+package com.test.model;
+
 public class Persona {
     private String nombre;
     private String apellidos;
     private int edad;
     private boolean trabajo;
     public static String empresa= "java";
+    private DNI dni;
 
+    public Persona(DNI dni) {
+        this.dni = dni;
+    }
 
     public static String getEmpresa() {
         return empresa;
+    }
+
+    public DNI getDni() {
+        return dni;
+    }
+
+    public void setDni(DNI dni) {
+        this.dni = dni;
     }
 
     public static void setEmpresa(String empresa) {
@@ -67,7 +81,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" +
+        return "com.test.model.Persona{" +
                 "nombre='" + nombre + '\'' +
                 ", apellidos='" + apellidos + '\'' +
                 ", edad=" + edad +
@@ -76,7 +90,7 @@ public class Persona {
     }
 
     public void info(){
-        System.out.println("Metodo en la clase Persona");
+        System.out.println("Metodo en la clase com.test.model.Persona");
 
     }
 }

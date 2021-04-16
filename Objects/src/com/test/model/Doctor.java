@@ -1,4 +1,6 @@
-public class Doctor extends Profesor{
+package com.test.model;
+
+public class Doctor extends Profesor {
 
     private boolean decano;
 
@@ -11,7 +13,8 @@ public class Doctor extends Profesor{
     }
 
     public void info(){
-        System.out.println("Metodo en la clase Doctor");
+        System.out.println("Metodo en la clase com.test.model.Doctor");
 
     }
+
 }

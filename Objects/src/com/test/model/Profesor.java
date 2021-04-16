@@ -1,4 +1,8 @@
-public class Profesor extends Persona{
+package com.test.model;
+
+import com.test.model.Persona;
+
+public class Profesor extends Persona {
 
     private String asignatura;
 
@@ -18,7 +22,7 @@ public class Profesor extends Persona{
 
     @Override
     public String toString() {
-        return "Profesor{" +
+        return "com.test.model.Profesor{" +
                 "asignatura='" + asignatura + '\'' +
                 '}';
     }

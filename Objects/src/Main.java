@@ -1,5 +1,9 @@
 //Working with class , new functions and understand Java structure
 
+import com.test.model.*;
+
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
         Persona p1 = new Persona();
@@ -60,8 +64,41 @@ public class Main {
 
         }
 
+        d1.setDni(new DNI("a",999999));
+        System.out.println( d1.getDni());
 
+        a1.getAsignaturas().add("matematicas");
+        a1.getAsignaturas().add("Lengua");
+        a1.getAsignaturas().add("fisica");
 
+        System.out.println(a1.getAsignaturas());
 
+        List<String> listaAux = a1.getAsignaturas();
+        listaAux.add("etica");
+
+        //System.out.println(listaAux.get(0));
+
+        for (Iterator iterator = listaAux.iterator(); iterator.hasNext();){
+            String string = (String) iterator.next();
+            System.out.println(string);
+
+        }
+
+        for (int i = 0; i < listaAux.size(); i++){
+            System.out.println("----------------------");
+            System.out.println(i+" : "+listaAux.get(i));
+
+        }
+
+        List<Persona> personas = new ArrayList<Persona>();
+        personas.add(d1);
+        personas.add(a1);
+        personas.add(pr1);
+
+        for (Iterator iterator = personas.iterator(); iterator.hasNext();){
+            Persona persona = (Persona) iterator.next();
+            System.out.println(persona);
+
+        }
     }
 }
